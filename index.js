@@ -1,11 +1,11 @@
-const vfile = require('to-vfile');
+import vfile from "to-vfile";
 
 function toGatsbyRemarkPlugin(remarkPlugin) {
-  return function({ markdownAST, markdownNode }, options) {
+  return function ({ markdownAST, markdownNode }, options) {
     const file = vfile(markdownNode.fileAbsolutePath);
 
     return remarkPlugin(options)(markdownAST, file);
-  }
+  };
 }
 
-module.exports = toGatsbyRemarkPlugin;
+export default toGatsbyRemarkPlugin;
