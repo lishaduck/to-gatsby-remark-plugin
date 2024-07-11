@@ -8,5 +8,6 @@
   "license": "MIT",
   "dependencies": {
     "to-vfile": "^6.1.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }
